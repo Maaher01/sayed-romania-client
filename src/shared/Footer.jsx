@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div>
@@ -60,13 +62,13 @@ const Footer = () => {
                           </a>
                         </li>
                         <li>
-                          <a href="#">
+                          <Link to="portfolio-details">
                             <i
                               className="fa fa-caret-right"
                               aria-hidden="true"
                             />
                             About Us
-                          </a>
+                          </Link>
                         </li>
                         <li>
                           <a href="#">
@@ -136,13 +138,13 @@ const Footer = () => {
                           </a>
                         </li>
                         <li>
-                          <a href="#">
+                          <Link to="contact-us">
                             <i
                               className="fa fa-caret-right"
                               aria-hidden="true"
                             />
                             Contact Us
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
