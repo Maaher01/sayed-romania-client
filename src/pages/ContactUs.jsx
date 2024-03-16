@@ -1,9 +1,27 @@
 import Breadcrumbs from "../components/Breadcrumbs";
 
 const ContactUs = () => {
+  const infoData = [
+    {
+      iconClass: "icofont icofont-ui-call",
+      title: "+(000) 1234 56789",
+      subtitle: "info@company.com",
+    },
+    {
+      iconClass: "icofont-google-map",
+      title: "2 Fir e Brigade Road",
+      subtitle: "Chittagonj, Lakshmipur",
+    },
+    {
+      iconClass: "icofont icofont-wall-clock",
+      title: "Mon - Sat: 8am - 5pm",
+      subtitle: "Sunday Closed",
+    },
+  ];
+
   return (
     <div>
-      <Breadcrumbs />
+      <Breadcrumbs pageTitle="Contact Us" />
       <section className="contact-us section">
         <div className="container">
           <div className="inner">
@@ -97,39 +115,17 @@ const ContactUs = () => {
           </div>
           <div className="contact-info">
             <div className="row">
-              {/* single-info */}
-              <div className="col-lg-4 col-12 ">
-                <div className="single-info">
-                  <i className="icofont icofont-ui-call" />
-                  <div className="content">
-                    <h3>+(000) 1234 56789</h3>
-                    <p>info@company.com</p>
+              {infoData.map((info, index) => (
+                <div key={index} className="col-lg-4 col-12">
+                  <div className="single-info">
+                    <i className={info.iconClass} />
+                    <div className="content">
+                      <h3>{info.title}</h3>
+                      <p>{info.subtitle}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              {/*/End single-info */}
-              {/* single-info */}
-              <div className="col-lg-4 col-12 ">
-                <div className="single-info">
-                  <i className="icofont-google-map" />
-                  <div className="content">
-                    <h3>2 Fir e Brigade Road</h3>
-                    <p>Chittagonj, Lakshmipur</p>
-                  </div>
-                </div>
-              </div>
-              {/*/End single-info */}
-              {/* single-info */}
-              <div className="col-lg-4 col-12 ">
-                <div className="single-info">
-                  <i className="icofont icofont-wall-clock" />
-                  <div className="content">
-                    <h3>Mon - Sat: 8am - 5pm</h3>
-                    <p>Sunday Closed</p>
-                  </div>
-                </div>
-              </div>
-              {/*/End single-info */}
+              ))}
             </div>
           </div>
         </div>

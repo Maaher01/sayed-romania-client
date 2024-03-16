@@ -1,4 +1,15 @@
 const Portfolio = () => {
+  const imageUrls = [
+    "././src/assets/img/pf1.jpg",
+    "././src/assets/img/pf2.jpg",
+    "././src/assets/img/pf3.jpg",
+    "././src/assets/img/pf4.jpg",
+    "././src/assets/img/pf1.jpg",
+    "././src/assets/img/pf2.jpg",
+    "././src/assets/img/pf3.jpg",
+    "././src/assets/img/pf4.jpg",
+  ];
+
   return (
     <div>
       <section className="portfolio section">
@@ -20,54 +31,14 @@ const Portfolio = () => {
           <div className="row">
             <div className="col-lg-12 col-12">
               <div className="owl-carousel portfolio-slider">
-                <div className="single-pf">
-                  <img src="././src/assets/img/pf1.jpg" alt="#" />
-                  <a href="portfolio-details.html" className="btn">
-                    View Details
-                  </a>
-                </div>
-                <div className="single-pf">
-                  <img src="././src/assets/img/pf2.jpg" alt="#" />
-                  <a href="portfolio-details.html" className="btn">
-                    View Details
-                  </a>
-                </div>
-                <div className="single-pf">
-                  <img src="././src/assets/img/pf3.jpg" alt="#" />
-                  <a href="portfolio-details.html" className="btn">
-                    View Details
-                  </a>
-                </div>
-                <div className="single-pf">
-                  <img src="././src/assets/img/pf4.jpg" alt="#" />
-                  <a href="portfolio-details.html" className="btn">
-                    View Details
-                  </a>
-                </div>
-                <div className="single-pf">
-                  <img src="././src/assets/img/pf1.jpg" alt="#" />
-                  <a href="portfolio-details.html" className="btn">
-                    View Details
-                  </a>
-                </div>
-                <div className="single-pf">
-                  <img src="././src/assets/img/pf2.jpg" alt="#" />
-                  <a href="portfolio-details.html" className="btn">
-                    View Details
-                  </a>
-                </div>
-                <div className="single-pf">
-                  <img src="././src/assets/img/pf3.jpg" alt="#" />
-                  <a href="portfolio-details.html" className="btn">
-                    View Details
-                  </a>
-                </div>
-                <div className="single-pf">
-                  <img src="././src/assets/img/pf4.jpg" alt="#" />
-                  <a href="portfolio-details.html" className="btn">
-                    View Details
-                  </a>
-                </div>
+                {imageUrls.map((imageUrl, index) => (
+                  <div key={index} className="single-pf">
+                    <img src={imageUrl} alt="#" />
+                    <a href="portfolio-details.html" className="btn">
+                      View Details
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

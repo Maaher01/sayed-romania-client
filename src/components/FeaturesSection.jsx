@@ -1,4 +1,25 @@
 const FeaturesSection = () => {
+  const featuresData = [
+    {
+      iconClass: "icofont icofont-ambulance-cross",
+      title: "Emergency Help",
+      description:
+        "Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.",
+    },
+    {
+      iconClass: "icofont icofont-medical-sign-alt",
+      title: "Enriched Pharmacy",
+      description:
+        "Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.",
+    },
+    {
+      iconClass: "icofont icofont-stethoscope",
+      title: "Medical Treatment",
+      description:
+        "Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.",
+    },
+  ];
+
   return (
     <section className="Feautes section">
       <div className="container">
@@ -15,48 +36,21 @@ const FeaturesSection = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-4 col-12">
-            {/* Start Single features */}
-            <div className="single-features">
-              <div className="signle-icon">
-                <i className="icofont icofont-ambulance-cross" />
+          {featuresData.map((feature, index) => (
+            <div key={index} className="col-lg-4 col-12">
+              <div
+                className={`single-features ${
+                  index === featuresData.length - 1 ? "last" : ""
+                }`}
+              >
+                <div className="signle-icon">
+                  <i className={feature.iconClass} />
+                </div>
+                <h3>{feature.title}</h3>
+                <p>{feature.description}</p>
               </div>
-              <h3>Emergency Help</h3>
-              <p>
-                Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam
-                vulputate.
-              </p>
             </div>
-            {/* End Single features */}
-          </div>
-          <div className="col-lg-4 col-12">
-            {/* Start Single features */}
-            <div className="single-features">
-              <div className="signle-icon">
-                <i className="icofont icofont-medical-sign-alt" />
-              </div>
-              <h3>Enriched Pharmecy</h3>
-              <p>
-                Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam
-                vulputate.
-              </p>
-            </div>
-            {/* End Single features */}
-          </div>
-          <div className="col-lg-4 col-12">
-            {/* Start Single features */}
-            <div className="single-features last">
-              <div className="signle-icon">
-                <i className="icofont icofont-stethoscope" />
-              </div>
-              <h3>Medical Treatment</h3>
-              <p>
-                Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam
-                vulputate.
-              </p>
-            </div>
-            {/* End Single features */}
-          </div>
+          ))}
         </div>
       </div>
     </section>

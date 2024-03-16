@@ -1,4 +1,49 @@
 const Service = () => {
+  const servicesData = [
+    {
+      iconClass: "icofont icofont-prescription",
+      title: "General Treatment",
+      link: "service-details.html",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    },
+    {
+      iconClass: "icofont icofont-tooth",
+      title: "Teeth Whitening",
+      link: "service-details.html",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    },
+    {
+      iconClass: "icofont icofont-heart-alt",
+      title: "Heart Surgery",
+      link: "service-details.html",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    },
+    {
+      iconClass: "icofont icofont-listening",
+      title: "Ear Treatment",
+      link: "service-details.html",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    },
+    {
+      iconClass: "icofont icofont-eye-alt",
+      title: "Vision Problems",
+      link: "service-details.html",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    },
+    {
+      iconClass: "icofont icofont-blood",
+      title: "Blood Transfusion",
+      link: "service-details.html",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+    },
+  ];
+
   return (
     <div>
       <section className="services section">
@@ -16,90 +61,17 @@ const Service = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-4 col-md-6 col-12">
-              {/* Start Single Service */}
-              <div className="single-service">
-                <i className="icofont icofont-prescription" />
-                <h4>
-                  <a href="service-details.html">General Treatment</a>
-                </h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  luctus dictum eros ut imperdiet.{" "}
-                </p>
+            {servicesData.map((service, index) => (
+              <div key={index} className="col-lg-4 col-md-6 col-12">
+                <div className="single-service">
+                  <i className={service.iconClass} />
+                  <h4>
+                    <a href={service.link}>{service.title}</a>
+                  </h4>
+                  <p>{service.description}</p>
+                </div>
               </div>
-              {/* End Single Service */}
-            </div>
-            <div className="col-lg-4 col-md-6 col-12">
-              {/* Start Single Service */}
-              <div className="single-service">
-                <i className="icofont icofont-tooth" />
-                <h4>
-                  <a href="service-details.html">Teeth Whitening</a>
-                </h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  luctus dictum eros ut imperdiet.{" "}
-                </p>
-              </div>
-              {/* End Single Service */}
-            </div>
-            <div className="col-lg-4 col-md-6 col-12">
-              {/* Start Single Service */}
-              <div className="single-service">
-                <i className="icofont icofont-heart-alt" />
-                <h4>
-                  <a href="service-details.html">Heart Surgery</a>
-                </h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  luctus dictum eros ut imperdiet.{" "}
-                </p>
-              </div>
-              {/* End Single Service */}
-            </div>
-            <div className="col-lg-4 col-md-6 col-12">
-              {/* Start Single Service */}
-              <div className="single-service">
-                <i className="icofont icofont-listening" />
-                <h4>
-                  <a href="service-details.html">Ear Treatment</a>
-                </h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  luctus dictum eros ut imperdiet.{" "}
-                </p>
-              </div>
-              {/* End Single Service */}
-            </div>
-            <div className="col-lg-4 col-md-6 col-12">
-              {/* Start Single Service */}
-              <div className="single-service">
-                <i className="icofont icofont-eye-alt" />
-                <h4>
-                  <a href="service-details.html">Vision Problems</a>
-                </h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  luctus dictum eros ut imperdiet.{" "}
-                </p>
-              </div>
-              {/* End Single Service */}
-            </div>
-            <div className="col-lg-4 col-md-6 col-12">
-              {/* Start Single Service */}
-              <div className="single-service">
-                <i className="icofont icofont-blood" />
-                <h4>
-                  <a href="service-details.html">Blood Transfusion</a>
-                </h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  luctus dictum eros ut imperdiet.{" "}
-                </p>
-              </div>
-              {/* End Single Service */}
-            </div>
+            ))}
           </div>
         </div>
       </section>

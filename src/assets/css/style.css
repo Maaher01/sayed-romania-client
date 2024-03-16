@@ -1129,6 +1129,7 @@ body {
   background: #1a76d1;
   color: #fff;
 }
+
 .call-action .content .btn:last-child {
   margin-right: 0px;
 }
@@ -1746,7 +1747,7 @@ body {
 	Start Clients CSS
 ==========================*/
 .clients {
-  background-image: url("././src/assets/img/client-bg.jpg");
+  background-image: url("../img/client-bg.jpg");
   background-size: cover;
   background-position: center;
   padding: 100px 0px;
@@ -1955,8 +1956,7 @@ body {
   color: #2c2d3f;
   margin-top: 30px;
 }
-.doctor-details-item .doctor-details-work .time-sidual {
-}
+
 .doctor-details-item .doctor-details-work .time-sidual {
   overflow: hidden;
 }
@@ -1968,7 +1968,6 @@ body {
 }
 .doctor-details-item .doctor-details-work .time-sidual li span {
   display: inline-block;
-  float: right;
 }
 .doctor-details-item .doctor-details-work .day-head .time {
   font-weight: 400;
@@ -1979,8 +1978,7 @@ body {
   padding-left: 60px;
   padding-top: 70px;
 }
-.doctor-details-item .doctor-details-biography {
-}
+
 .doctor-details-item .doctor-details-biography h3 {
   font-weight: 600;
   font-size: 24px;
@@ -2313,8 +2311,7 @@ body {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
-.news-single .news-head {
-}
+
 .news-single .news-head img {
   width: 100%;
   height: 100%;
@@ -2641,8 +2638,7 @@ body {
   margin-bottom: 20px;
   text-transform: capitalize;
 }
-.news-single .form {
-}
+
 .news-single .form-group {
   position: relative;
   display: block;
@@ -2762,8 +2758,7 @@ body {
   box-shadow: 0px 0px 10px #00000024;
   border-radius: 5px;
 }
-.appointment.single-page .title {
-}
+
 .appointment.single-page .title h3 {
   font-size: 25px;
   display: block;
@@ -2873,7 +2868,6 @@ body {
 }
 .appointment.single-page .time-sidual li span {
   display: inline-block;
-  float: right;
 }
 .appointment.single-page .day-head .time {
   font-weight: 400;
@@ -3581,15 +3575,13 @@ body {
 .newsletter {
   background: #edf2ff;
 }
-.newsletter .subscribe-text {
-}
+
 .newsletter .subscribe-text h6 {
   font-size: 22px;
   margin-bottom: 10px;
   color: #2c2d3f;
 }
-.newsletter .subscribe-text p {
-}
+
 .newsletter .subscribe-form {
   position: relative;
 }
@@ -4026,8 +4018,7 @@ body {
   background: #000;
   opacity: 0.1;
 }
-.footer .single-footer {
-}
+
 .footer .single-footer .social {
   margin-top: 25px;
   padding-left: 0;
@@ -4121,7 +4112,6 @@ body {
 }
 .footer .single-footer .time-sidual li span {
   display: inline-block;
-  float: right;
 }
 .footer .single-footer .day-head .time {
   font-weight: 400;
@@ -4145,7 +4135,6 @@ body {
   padding-left: 18px;
   padding-right: 70px;
   display: inline-block;
-  float: left;
   border-radius: 0px;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;

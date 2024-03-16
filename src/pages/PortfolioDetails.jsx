@@ -3,7 +3,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 const PortfolioDetails = () => {
   return (
     <div>
-      <Breadcrumbs />
+      <Breadcrumbs pageTitle="Portfolio Details" />
       <section className="pf-details section">
         <div className="container">
           <div className="row">

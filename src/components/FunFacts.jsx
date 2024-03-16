@@ -1,53 +1,43 @@
 const FunFacts = () => {
+  const funData = [
+    {
+      iconClass: "icofont icofont-home",
+      counter: 3468,
+      text: "Hospital Rooms",
+    },
+    {
+      iconClass: "icofont icofont-user-alt-3",
+      counter: 557,
+      text: "Specialist Doctors",
+    },
+    {
+      iconClass: "icofont-simple-smile",
+      counter: 4379,
+      text: "Happy Patients",
+    },
+    {
+      iconClass: "icofont icofont-table",
+      counter: 32,
+      text: "Years of Experience",
+    },
+  ];
+
   return (
     <div>
       <div id="fun-facts" className="fun-facts section overlay">
         <div className="container">
           <div className="row">
-            <div className="col-lg-3 col-md-6 col-12">
-              {/* Start Single Fun */}
-              <div className="single-fun">
-                <i className="icofont icofont-home" />
-                <div className="content">
-                  <span className="counter">3468</span>
-                  <p>Hospital Rooms</p>
+            {funData.map((fun, index) => (
+              <div key={index} className="col-lg-3 col-md-6 col-12">
+                <div className="single-fun">
+                  <i className={fun.iconClass} />
+                  <div className="content">
+                    <span className="counter">{fun.counter}</span>
+                    <p>{fun.text}</p>
+                  </div>
                 </div>
               </div>
-              {/* End Single Fun */}
-            </div>
-            <div className="col-lg-3 col-md-6 col-12">
-              {/* Start Single Fun */}
-              <div className="single-fun">
-                <i className="icofont icofont-user-alt-3" />
-                <div className="content">
-                  <span className="counter">557</span>
-                  <p>Specialist Doctors</p>
-                </div>
-              </div>
-              {/* End Single Fun */}
-            </div>
-            <div className="col-lg-3 col-md-6 col-12">
-              {/* Start Single Fun */}
-              <div className="single-fun">
-                <i className="icofont-simple-smile" />
-                <div className="content">
-                  <span className="counter">4379</span>
-                  <p>Happy Patients</p>
-                </div>
-              </div>
-              {/* End Single Fun */}
-            </div>
-            <div className="col-lg-3 col-md-6 col-12">
-              {/* Start Single Fun */}
-              <div className="single-fun">
-                <i className="icofont icofont-table" />
-                <div className="content">
-                  <span className="counter">32</span>
-                  <p>Years of Experience</p>
-                </div>
-              </div>
-              {/* End Single Fun */}
-            </div>
+            ))}
           </div>
         </div>
       </div>

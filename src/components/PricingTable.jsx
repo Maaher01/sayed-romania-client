@@ -1,4 +1,43 @@
 const PricingTable = () => {
+  const tablesData = [
+    {
+      iconClass: "icofont icofont-ui-cut",
+      title: "Plastic Surgery",
+      price: "$199",
+      listItems: [
+        { text: "Lorem ipsum dolor sit", className: "" },
+        { text: "Cubitur sollicitudin fentum", className: "" },
+        { text: "Nullam interdum enim", className: "cross" },
+        { text: "Donec ultricies metus", className: "cross" },
+        { text: "Pellentesque eget nibh", className: "cross" },
+      ],
+    },
+    {
+      iconClass: "icofont icofont-tooth",
+      title: "Teeth Whitening",
+      price: "$299",
+      listItems: [
+        { text: "Lorem ipsum dolor sit", className: "" },
+        { text: "Cubitur sollicitudin fentum", className: "" },
+        { text: "Nullam interdum enim", className: "" },
+        { text: "Donec ultricies metus", className: "cross" },
+        { text: "Pellentesque eget nibh", className: "cross" },
+      ],
+    },
+    {
+      iconClass: "icofont icofont-heart-beat",
+      title: "Heart Surgery",
+      price: "$399",
+      listItems: [
+        { text: "Lorem ipsum dolor sit", className: "" },
+        { text: "Cubitur sollicitudin fentum", className: "" },
+        { text: "Nullam interdum enim", className: "" },
+        { text: "Donec ultricies metus", className: "" },
+        { text: "Pellentesque eget nibh", className: "" },
+      ],
+    },
+  ];
+
   return (
     <div>
       <section className="pricing-table section">
@@ -16,147 +55,37 @@ const PricingTable = () => {
             </div>
           </div>
           <div className="row">
-            {/* Single Table */}
-            <div className="col-lg-4 col-md-12 col-12">
-              <div className="single-table">
-                {/* Table Head */}
-                <div className="table-head">
-                  <div className="icon">
-                    <i className="icofont icofont-ui-cut" />
+            {tablesData.map((table, index) => (
+              <div key={index} className="col-lg-4 col-md-12 col-12">
+                <div className="single-table">
+                  <div className="table-head">
+                    <div className="icon">
+                      <i className={table.iconClass} />
+                    </div>
+                    <h4 className="title">{table.title}</h4>
+                    <div className="price">
+                      <p className="amount">
+                        {table.price}
+                        <span>/ Per Visit</span>
+                      </p>
+                    </div>
                   </div>
-                  <h4 className="title">Plastic Suggery</h4>
-                  <div className="price">
-                    <p className="amount">
-                      $199<span>/ Per Visit</span>
-                    </p>
+                  <ul className="table-list">
+                    {table.listItems.map((item, i) => (
+                      <li key={i} className={item.className}>
+                        <i className="icofont icofont-ui-check" />
+                        {item.text}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="table-bottom">
+                    <a className="btn" href="#">
+                      Book Now
+                    </a>
                   </div>
                 </div>
-                {/* Table List */}
-                <ul className="table-list">
-                  <li>
-                    <i className="icofont icofont-ui-check" />
-                    Lorem ipsum dolor sit
-                  </li>
-                  <li>
-                    <i className="icofont icofont-ui-check" />
-                    Cubitur sollicitudin fentum
-                  </li>
-                  <li className="cross">
-                    <i className="icofont icofont-ui-close" />
-                    Nullam interdum enim
-                  </li>
-                  <li className="cross">
-                    <i className="icofont icofont-ui-close" />
-                    Donec ultricies metus
-                  </li>
-                  <li className="cross">
-                    <i className="icofont icofont-ui-close" />
-                    Pellentesque eget nibh
-                  </li>
-                </ul>
-                <div className="table-bottom">
-                  <a className="btn" href="#">
-                    Book Now
-                  </a>
-                </div>
-                {/* Table Bottom */}
               </div>
-            </div>
-            {/* End Single Table*/}
-            {/* Single Table */}
-            <div className="col-lg-4 col-md-12 col-12">
-              <div className="single-table">
-                {/* Table Head */}
-                <div className="table-head">
-                  <div className="icon">
-                    <i className="icofont icofont-tooth" />
-                  </div>
-                  <h4 className="title">Teeth Whitening</h4>
-                  <div className="price">
-                    <p className="amount">
-                      $299<span>/ Per Visit</span>
-                    </p>
-                  </div>
-                </div>
-                {/* Table List */}
-                <ul className="table-list">
-                  <li>
-                    <i className="icofont icofont-ui-check" />
-                    Lorem ipsum dolor sit
-                  </li>
-                  <li>
-                    <i className="icofont icofont-ui-check" />
-                    Cubitur sollicitudin fentum
-                  </li>
-                  <li>
-                    <i className="icofont icofont-ui-check" />
-                    Nullam interdum enim
-                  </li>
-                  <li className="cross">
-                    <i className="icofont icofont-ui-close" />
-                    Donec ultricies metus
-                  </li>
-                  <li className="cross">
-                    <i className="icofont icofont-ui-close" />
-                    Pellentesque eget nibh
-                  </li>
-                </ul>
-                <div className="table-bottom">
-                  <a className="btn" href="#">
-                    Book Now
-                  </a>
-                </div>
-                {/* Table Bottom */}
-              </div>
-            </div>
-            {/* End Single Table*/}
-            {/* Single Table */}
-            <div className="col-lg-4 col-md-12 col-12">
-              <div className="single-table">
-                {/* Table Head */}
-                <div className="table-head">
-                  <div className="icon">
-                    <i className="icofont-heart-beat" />
-                  </div>
-                  <h4 className="title">Heart Suggery</h4>
-                  <div className="price">
-                    <p className="amount">
-                      $399<span>/ Per Visit</span>
-                    </p>
-                  </div>
-                </div>
-                {/* Table List */}
-                <ul className="table-list">
-                  <li>
-                    <i className="icofont icofont-ui-check" />
-                    Lorem ipsum dolor sit
-                  </li>
-                  <li>
-                    <i className="icofont icofont-ui-check" />
-                    Cubitur sollicitudin fentum
-                  </li>
-                  <li>
-                    <i className="icofont icofont-ui-check" />
-                    Nullam interdum enim
-                  </li>
-                  <li>
-                    <i className="icofont icofont-ui-check" />
-                    Donec ultricies metus
-                  </li>
-                  <li>
-                    <i className="icofont icofont-ui-check" />
-                    Pellentesque eget nibh
-                  </li>
-                </ul>
-                <div className="table-bottom">
-                  <a className="btn" href="#">
-                    Book Now
-                  </a>
-                </div>
-                {/* Table Bottom */}
-              </div>
-            </div>
-            {/* End Single Table*/}
+            ))}
           </div>
         </div>
       </section>

@@ -1,5 +1,21 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
-  const topLinks = [{ text: "About" }, { text: "Contact Us" }, { text: "FAQ" }];
+  const topLinks = [
+    { text: "About Us", link: "portfolio-details" },
+    { text: "Doctors" },
+    { text: "Contact Us", link: "contact-us" },
+    { text: "FAQ" },
+  ];
+
+  const navMenus = [
+    { text: "Home", link: "/" },
+    { text: "Doctors" },
+    { text: "Services" },
+    { text: "Pages" },
+    { text: "Blogs" },
+    { text: "Contact Us", link: "contact-us" },
+  ];
 
   return (
     <>
@@ -14,7 +30,7 @@ const Navbar = () => {
                 <ul className="top-link">
                   {topLinks.map((link, index) => (
                     <li key={index}>
-                      <a>{link.text}</a>
+                      <Link to={link.link}>{link.text}</Link>
                     </li>
                   ))}
                 </ul>
@@ -48,9 +64,9 @@ const Navbar = () => {
                 <div className="col-lg-3 col-md-3 col-12">
                   {/* Start Logo */}
                   <div className="logo">
-                    <a href="index.html">
+                    <Link to="/">
                       <img src="././src/assets/img/logo.png" alt="#" />
-                    </a>
+                    </Link>
                   </div>
                   {/* End Logo */}
                   {/* Mobile Nav */}
@@ -62,31 +78,11 @@ const Navbar = () => {
                   <div className="main-menu">
                     <nav className="navigation">
                       <ul className="nav menu">
-                        <li>
-                          <a href="#">Home</a>
-                        </li>
-                        <li>
-                          <a href="#">Doctos </a>
-                        </li>
-                        <li>
-                          <a href="#">Services </a>
-                        </li>
-                        <li>
-                          <a href="#">Pages</a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            Blogs <i className="icofont-rounded-down" />
-                          </a>
-                          <ul className="dropdown">
-                            <li>
-                              <a href="blog-single.html">Blog Details</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="contact.html">Contact Us</a>
-                        </li>
+                        {navMenus.map((link, index) => (
+                          <li key={index}>
+                            <Link to={link.link}>{link.text}</Link>
+                          </li>
+                        ))}
                       </ul>
                     </nav>
                   </div>
