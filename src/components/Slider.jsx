@@ -1,108 +1,108 @@
 import { Link } from "react-router-dom";
 
 const Slider = () => {
-  return (
-    <section className="slider">
-      <div className="hero-slider">
-        {/* Start Single Slider */}
-        <div
-          className="single-slider"
-          style={{ backgroundImage: 'url("././src/assets/img/slider.jpg")' }}
-        >
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-7">
-                <div className="text">
-                  <h1>
-                    We Provide <span>Medical</span> Services That You Can{" "}
-                    <span>Trust!</span>
-                  </h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Mauris sed nisl pellentesque, faucibus libero eu, gravida
-                    quam.{" "}
-                  </p>
-                  <div className="button">
-                    <Link to="portfolio-details" className="btn">
-                      About Us
-                    </Link>
-                    <Link to="contact-us" className="btn primary">
-                      Conatct Us
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* End Single Slider */}
-        {/* Start Single Slider */}
-        <div
-          className="single-slider"
-          style={{ backgroundImage: 'url("././src/assets/img/slider2.jpg")' }}
-        >
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-7">
-                <div className="text">
-                  <h1>
-                    We Provide <span>Medical</span> Services That You Can{" "}
-                    <span>Trust!</span>
-                  </h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Mauris sed nisl pellentesque, faucibus libero eu, gravida
-                    quam.{" "}
-                  </p>
-                  <div className="button">
-                    <Link to="portfolio-details" className="btn">
-                      About Us
-                    </Link>
-                    <Link to="contact-us" className="btn primary">
-                      Conatct Us
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* Start End Slider */}
-        {/* Start Single Slider */}
-        <div
-          className="single-slider"
-          style={{ backgroundImage: 'url("././src/assets/img/slider3.jpg")' }}
-        >
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-7">
-                <div className="text">
-                  <h1>
-                    We Provide <span>Medical</span> Services That You Can{" "}
-                    <span>Trust!</span>
-                  </h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Mauris sed nisl pellentesque, faucibus libero eu, gravida
-                    quam.{" "}
-                  </p>
-                  <div className="button">
-                    <Link to="portfolio-details" className="btn">
-                      About Us
-                    </Link>
-                    <Link to="contact-us" className="btn primary">
-                      Conatct Us
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* End Single Slider */}
-      </div>
-    </section>
-  );
+	return (
+		<section className="slider">
+			<div className="hero-slider">
+				{/* Start Single Slider */}
+				<div
+					className="single-slider"
+					style={{
+						backgroundImage: 'url("././src/assets/img/overseas-manpower.jpg")',
+					}}
+				>
+					<div className="container">
+						<div className="row">
+							<div className="col-lg-6">
+								<div className="text">
+									<h1>
+										<span>Sayed Romania </span>- The leading recruiting agency
+									</h1>
+									<p>
+										As a one of the leading recruiting agencies in Bangladesh,{" "}
+										we are currently working with Romania
+									</p>
+									<div className="button">
+										<Link to="portfolio-details" className="btn">
+											About Us
+										</Link>
+										<Link to="contact-us" className="btn primary">
+											Conatct Us
+										</Link>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{/* End Single Slider */}
+				{/* Start Single Slider */}
+				<div
+					className="single-slider"
+					style={{
+						backgroundImage: 'url("././src/assets/img/slider2.jpg")',
+					}}
+				>
+					<div className="container">
+						<div className="row">
+							<div className="col-lg-6">
+								<div className="text">
+									<h1>
+										<span>Sayed Romania </span>- The leading recruiting agency
+									</h1>
+									<p>
+										As a one of the leading recruiting agencies in Bangladesh,
+										we are currently working with Romania{" "}
+									</p>
+									<div className="button">
+										<Link to="portfolio-details" className="btn">
+											About Us
+										</Link>
+										<Link to="contact-us" className="btn primary">
+											Conatct Us
+										</Link>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{/* Start End Slider */}
+				{/* Start Single Slider */}
+				<div
+					className="single-slider"
+					style={{
+						backgroundImage: 'url("././src/assets/img/slider1.jpg")',
+					}}
+				>
+					<div className="container">
+						<div className="row">
+							<div className="col-lg-6">
+								<div className="text">
+									<h1>
+										<span>Sayed Romania </span>- The leading recruiting agency
+									</h1>
+									<p>
+										As a one of the leading recruiting agencies in Bangladesh,
+										we are currently working with Romania{" "}
+									</p>
+									<div className="button">
+										<Link to="portfolio-details" className="btn">
+											About Us
+										</Link>
+										<Link to="contact-us" className="btn primary">
+											Conatct Us
+										</Link>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{/* End Single Slider */}
+			</div>
+		</section>
+	);
 };
 
 export default Slider;

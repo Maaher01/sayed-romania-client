@@ -13,23 +13,23 @@ import Appointment from "../components/Appointment";
 import NewsletterArea from "../components/NewsletterArea";
 
 const Home = () => {
-  return (
-    <div>
-      <Slider />
-      <ScheduleArea />
-      <FeaturesSection />
-      <FunFacts />
-      <WhyChoose />
-      <CallToAction />
-      <Portfolio />
-      <Service />
-      <PricingTable />
-      <BlogArea />
-      <Clients />
-      <Appointment />
-      <NewsletterArea />
-    </div>
-  );
+	return (
+		<div>
+			<Slider />
+			<ScheduleArea />
+			<FeaturesSection />
+			<FunFacts />
+			<WhyChoose />
+			<CallToAction />
+			<Portfolio />
+			{/* <Service />
+      		<PricingTable /> */}
+			<BlogArea />
+			<Clients />
+			<Appointment />
+			<NewsletterArea />
+		</div>
+	);
 };
 
 export default Home;
