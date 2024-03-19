@@ -35,7 +35,7 @@ const ContactUs = () => {
               </div>
               <div className="col-lg-6">
                 <div className="contact-us-form">
-                  <h2>Contact With Us</h2>
+                  <h2>Contact Us</h2>
                   <p>
                     If you have any questions please fell free to contact with
                     us.

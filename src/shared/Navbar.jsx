@@ -24,7 +24,7 @@ const Navbar = () => {
         {/* Topbar */}
         <div className="topbar">
           <div className="container">
-            <div className="row">
+            <div className="d-flex justify-content-between row">
               <div className="col-lg-6 col-md-5 col-12">
                 {/* Contact */}
                 <ul className="top-link">
@@ -61,11 +61,11 @@ const Navbar = () => {
           <div className="container">
             <div className="inner">
               <div className="row">
-                <div className="col-lg-3 col-md-3 col-12">
+                <div className="col-lg-3 col-md-3 col-12 d-flex align-items-center">
                   {/* Start Logo */}
                   <div className="logo">
                     <Link to="/">
-                      <img src="././src/assets/img/logo.png" alt="#" />
+                      <img src="././src/assets/icons/logo_2.jpg" alt="#" />
                     </Link>
                   </div>
                   {/* End Logo */}
@@ -88,13 +88,13 @@ const Navbar = () => {
                   </div>
                   {/*/ End Main Menu */}
                 </div>
-                <div className="col-lg-2 col-12">
+                {/* <div className="col-lg-2 col-12">
                   <div className="get-quote">
                     <a href="appointment.html" className="btn">
                       Book Appointment
                     </a>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

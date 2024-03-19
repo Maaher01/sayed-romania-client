@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Slider = () => {
   return (
     <section className="slider">
@@ -21,12 +23,12 @@ const Slider = () => {
                     quam.{" "}
                   </p>
                   <div className="button">
-                    <a href="#" className="btn">
-                      Get Appointment
-                    </a>
-                    <a href="#" className="btn primary">
-                      Learn More
-                    </a>
+                    <Link to="portfolio-details" className="btn">
+                      About Us
+                    </Link>
+                    <Link to="contact-us" className="btn primary">
+                      Conatct Us
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -53,12 +55,12 @@ const Slider = () => {
                     quam.{" "}
                   </p>
                   <div className="button">
-                    <a href="#" className="btn">
-                      Get Appointment
-                    </a>
-                    <a href="#" className="btn primary">
+                    <Link to="portfolio-details" className="btn">
                       About Us
-                    </a>
+                    </Link>
+                    <Link to="contact-us" className="btn primary">
+                      Conatct Us
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -85,12 +87,12 @@ const Slider = () => {
                     quam.{" "}
                   </p>
                   <div className="button">
-                    <a href="#" className="btn">
-                      Get Appointment
-                    </a>
-                    <a href="#" className="btn primary">
-                      Conatct Now
-                    </a>
+                    <Link to="portfolio-details" className="btn">
+                      About Us
+                    </Link>
+                    <Link to="contact-us" className="btn primary">
+                      Conatct Us
+                    </Link>
                   </div>
                 </div>
               </div>
