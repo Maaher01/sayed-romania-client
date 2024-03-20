@@ -39,6 +39,13 @@ const CustomerReview = () => {
 											alt="#"
 										/>
 									</div>
+									{/* <div className="star d-flex justify-content-center">
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+										<i class="fa-solid fa-star"></i>
+									</div> */}
 									<div className="news-body">
 										<div className="news-content">
 											<p className="text">{review.text}</p>

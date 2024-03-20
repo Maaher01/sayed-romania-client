@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
 	const topLinks = [
 		{ text: "About Us", link: "portfolio-details" },
-		{ text: "Doctors" },
+		// { text: "Doctors" },
 		{ text: "Contact Us", link: "contact-us" },
 		{ text: "FAQ" },
 	];
 
 	const navMenus = [
 		{ text: "Home", link: "/" },
-		{ text: "Doctors" },
+		// { text: "Doctors" },
 		{ text: "Services" },
 		{ text: "Pages" },
 		{ text: "Blogs" },
@@ -61,12 +61,12 @@ const Navbar = () => {
 					<div className="container">
 						<div className="inner">
 							<div className="row">
-								<div className="col-lg-3 col-md-3 col-12 d-flex align-items-center">
+								<div className="col-lg-3 col-md-3 col-12">
 									{/* Start Logo */}
 									<div className="logo">
-										<Link to="/">
+										<a href="/">
 											<img src="././src/assets/icons/logo_2.jpg" alt="#" />
-										</Link>
+										</a>
 									</div>
 									{/* End Logo */}
 									{/* Mobile Nav */}
@@ -89,12 +89,26 @@ const Navbar = () => {
 									{/*/ End Main Menu */}
 								</div>
 								{/* <div className="col-lg-2 col-12">
-                  <div className="get-quote">
-                    <a href="appointment.html" className="btn">
-                      Book Appointment
-                    </a>
-                  </div>
-                </div> */}
+									<div className="subscribe-form">
+										<form
+											action="mail/mail.php"
+											method="get"
+											target="_blank"
+											className="newsletter-inner d-flex"
+										>
+											<input
+												name="EMAIL"
+												placeholder="Your passport number"
+												className="common-input"
+												onfocus="this.placeholder = ''"
+												onblur="this.placeholder = 'Your passport number'"
+												required=""
+												type="email"
+											/>
+											<button className="btn">Subscribe</button>
+										</form>
+									</div>
+								</div> */}
 							</div>
 						</div>
 					</div>

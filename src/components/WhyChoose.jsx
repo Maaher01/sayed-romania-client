@@ -6,7 +6,7 @@ const WhyChoose = () => {
 					<div className="row">
 						<div className="col-lg-12">
 							<div className="section-title">
-								<h2>We Offer Many Different Services</h2>
+								<h2>Who We Are</h2>
 								<i
 									className="icofont-airplane-alt"
 									style={{ fontSize: "24px", color: "#002a7b" }}
@@ -22,7 +22,7 @@ const WhyChoose = () => {
 						<div className="col-lg-6 col-12">
 							{/* Start Choose Left */}
 							<div className="choose-left">
-								<h3>Who We Are</h3>
+								{/* <h3>Who We Are</h3> */}
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 									Maecenas pharetra antege vel est lobortis, a commodo magna

@@ -332,6 +332,55 @@ body {
 	color: #fff;
 }
 
+.header-inner .subscribe-form {
+	position: relative;
+	/* margin-top: 5px; */
+}
+.header-inner .common-input {
+	height: 50px;
+	width: 300px;
+	border: none;
+	color: #333;
+	box-shadow: none;
+	text-shadow: none;
+	border-radius: 5px;
+	padding: 0px 25px;
+	font-weight: 500;
+	font-size: 14px;
+	background: #fff;
+	font-weight: 400;
+}
+.header-inner .btn {
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+	padding: 0;
+	width: 180px;
+	position: relative;
+	top: -2px;
+	border-radius: 5px;
+	margin-left: 10px;
+	font-size: 13px;
+	font-weight: 500;
+	box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
+	background-color: #c81025;
+	color: white;
+}
+
+.header-inner .btn:hover {
+	color: white;
+}
+
+.header-inner .btn:before {
+	border-radius: 5px;
+}
+.header-inner .button:hover {
+	box-shadow: none;
+}
+
 .header .logo {
 	float: left;
 }
@@ -1838,6 +1887,14 @@ body {
 	padding: 100px 0px;
 	position: relative;
 }
+
+.clients h2 {
+	color: white;
+	text-align: center;
+	margin-bottom: 40px;
+	font-size: 38px;
+}
+
 .clients.overlay::before {
 	background-color: #002a7b;
 	opacity: 0.8;
@@ -1849,6 +1906,13 @@ body {
 	text-align: center;
 	float: none;
 	padding: 0 35px;
+}
+.clients .single-clients .country-name {
+	color: white;
+	text-align: center;
+	margin-top: 12px;
+	font-weight: bold;
+	font-size: 18px;
 }
 /*========================
 	End Clients CSS
@@ -2148,8 +2212,9 @@ body {
 	padding: 30px;
 	left: 0;
 	z-index: 0;
+	padding: 20px;
 }
-.blog .single-news .news-content:before {
+/* .blog .single-news .news-content:before {
 	position: absolute;
 	content: "";
 	left: 0;
@@ -2162,12 +2227,13 @@ body {
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	transition: all 0.4s ease;
-}
+} */
 .blog .single-news:hover .news-content:before {
 	opacity: 1;
 	visibility: visible;
 	width: 100%;
 }
+
 .blog .single-news .news-body h2 {
 	font-size: 18px;
 	font-weight: 600;
@@ -2184,10 +2250,11 @@ body {
 }
 .blog .single-news .news-content .text {
 	font-weight: 400;
-	text-transform: capitalize;
-	font-size: 14px;
+	/* text-transform: capitalize; */
+	font-size: 15px;
 	letter-spacing: 0px;
-	line-height: 23px;
+	/* line-height: 23px; */
+	color: #2c2d3f;
 }
 .blog .single-news .news-content .name {
 	font-size: 13px;
@@ -3370,6 +3437,7 @@ body {
 .contact-us .contact-us-left {
 	width: 100%;
 	height: 100%;
+	padding: 50px 40px;
 }
 .contact-us .contact-us-form {
 	padding: 50px 40px;
@@ -3505,10 +3573,12 @@ body {
 }
 .contact-us .single-info {
 	background: #002a7b;
-	padding: 40px 60px;
-	height: 150px;
+	padding: 40px 30px;
+	height: 275px;
 	border-radius: 10px;
 	position: relative;
+	margin-top: 25px;
+	text-align: center;
 	-webkit-transition: all 0.3s ease-out 0s;
 	-moz-transition: all 0.3s ease-out 0s;
 	-ms-transition: all 0.3s ease-out 0s;
@@ -3543,20 +3613,20 @@ body {
 .contact-us .single-info i {
 	font-size: 42px;
 	color: #c81025;
-	position: absolute;
-	left: 40px;
+	/* position: absolute;
+	left: 40px; */
 }
-.contact-us .single-info .content {
-	margin-left: 45px;
-}
+
 .contact-us .single-info .content h3 {
 	color: #fff;
 	font-size: 18px;
 	font-weight: 600;
+	margin-top: 20px;
 }
 .contact-us .single-info .content p {
 	color: #fff;
 	margin-top: 5px;
+	font-size: 15px;
 }
 /* Google Map */
 .contact-us #myMap {

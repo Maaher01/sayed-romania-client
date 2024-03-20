@@ -11,6 +11,7 @@ import BlogArea from "../components/BlogArea";
 import Clients from "../components/Clients";
 import Appointment from "../components/Appointment";
 import NewsletterArea from "../components/NewsletterArea";
+import ProcessingArea from "../components/ProcessingArea";
 
 const Home = () => {
 	return (
@@ -19,11 +20,12 @@ const Home = () => {
 			<ScheduleArea />
 			<FeaturesSection />
 			<FunFacts />
+			<ProcessingArea />
 			<WhyChoose />
 			<CallToAction />
 			<Portfolio />
-			{/* <Service />
-      		<PricingTable /> */}
+			<Service />
+			{/* <PricingTable /> */}
 			<BlogArea />
 			<Clients />
 			<Appointment />

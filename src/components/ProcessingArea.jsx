@@ -1,22 +1,36 @@
-const Service = () => {
+const ProcessingArea = () => {
 	const servicesData = [
 		{
+			iconClass: "icofont icofont-stamp",
+			title: "Agreement with stamp (6 stamps of 100 BDT)",
+		},
+		{
 			iconClass: "icofont icofont-card",
-			title: "VISA processing",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+			title: "Main Passport",
 		},
 		{
-			iconClass: "icofont icofont-coconut-water",
-			title: "Holiday Packages",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+			iconClass: "icofont icofont-police",
+			title: "Police Clearance",
 		},
 		{
-			iconClass: "icofont icofont-package",
-			title: "Hajj & Umrah Packages",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet.",
+			iconClass: "icofont icofont-id-card",
+			title: "NID/Birth Certificate",
+		},
+		{
+			iconClass: "icofont icofont-injection-syringe",
+			title: "Vaccine Certificate",
+		},
+		{
+			iconClass: "icofont icofont-graduate",
+			title: "Education Certificate",
+		},
+		{
+			iconClass: "icofont-business-man-alt-1",
+			title: "Experience Certificate",
+		},
+		{
+			iconClass: "icofont icofont-image",
+			title: "Picture (35x45 lab print)",
 		},
 	];
 
@@ -27,7 +41,7 @@ const Service = () => {
 					<div className="row">
 						<div className="col-lg-12">
 							<div className="section-title">
-								<h2>We Offer Many Other Services</h2>
+								<h2>Processing Steps</h2>
 								<i
 									className="icofont-airplane-alt"
 									style={{ fontSize: "24px", color: "#002a7b" }}
@@ -58,4 +72,4 @@ const Service = () => {
 	);
 };
 
-export default Service;
+export default ProcessingArea;
