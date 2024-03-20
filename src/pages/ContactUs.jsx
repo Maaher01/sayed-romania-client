@@ -146,6 +146,17 @@ const ContactUs = () => {
 						</div>
 					</div>
 					<div className="contact-info">
+						<div className="section-title">
+							<h2>Our Branches</h2>
+							<i
+								className="icofont-airplane-alt"
+								style={{ fontSize: "24px", color: "#002a7b" }}
+							></i>
+							{/* <p>
+									Lorem ipsum dolor sit amet consectetur adipiscing elit
+									praesent aliquet. pretiumts
+								</p> */}
+						</div>
 						<div className="row">
 							{infoData.map((info, index) => (
 								<div key={index} className="col-lg-4 col-12">

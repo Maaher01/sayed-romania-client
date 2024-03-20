@@ -6,15 +6,15 @@ const Appointment = () => {
 					<div className="row">
 						<div className="col-lg-12">
 							<div className="section-title">
-								<h2>Have any complaint/suggestion?</h2>
+								<h2>Have any complaints / suggestions?</h2>
 								<i
 									className="icofont-airplane-alt"
 									style={{ fontSize: "24px", color: "#002a7b" }}
 								></i>
-								<p>
+								{/* <p>
 									Lorem ipsum dolor sit amet consectetur adipiscing elit
 									praesent aliquet. pretiumts
-								</p>
+								</p> */}
 							</div>
 						</div>
 					</div>

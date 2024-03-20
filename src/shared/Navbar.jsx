@@ -9,7 +9,7 @@ const Navbar = () => {
 	];
 
 	const navMenus = [
-		{ text: "Home", link: "/" },
+		// { text: "Home", link: "/" },
 		// { text: "Doctors" },
 		{ text: "Services" },
 		{ text: "Pages" },

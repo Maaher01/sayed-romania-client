@@ -46,10 +46,10 @@ const ProcessingArea = () => {
 									className="icofont-airplane-alt"
 									style={{ fontSize: "24px", color: "#002a7b" }}
 								></i>
-								<p>
+								{/* <p>
 									Lorem ipsum dolor sit amet consectetur adipiscing elit
 									praesent aliquet. pretiumts
-								</p>
+								</p> */}
 							</div>
 						</div>
 					</div>

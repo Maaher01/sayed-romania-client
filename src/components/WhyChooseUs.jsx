@@ -3,10 +3,21 @@ const WhyChooseUs = () => {
 		<section className="pf-details section">
 			<div className="container">
 				<div className="row">
+					<div className="section-title">
+						<h2>Why Choose Us</h2>
+						<i
+							className="icofont-airplane-alt"
+							style={{ fontSize: "24px", color: "#002a7b" }}
+						></i>
+						{/* <p>
+									Lorem ipsum dolor sit amet consectetur adipiscing elit
+									praesent aliquet. pretiumts
+								</p> */}
+					</div>
 					<div className="col-md-12 col-lg-6">
 						<div className="inner-content">
 							<div className="body-text">
-								<h3>Our Mission</h3>
+								<h4>Our Mission</h4>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
 									do eiumdod tempor a ti incididunt ut labore et dolore to in
@@ -23,7 +34,7 @@ const WhyChooseUs = () => {
 					<div className="col-md-12 col-lg-6">
 						<div className="inner-content">
 							<div className="body-text">
-								<h3>Our Vision</h3>
+								<h4>Our Vision</h4>
 								<p>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
 									do eiusmod tempor a ti incididunt ut labore et dolore to in

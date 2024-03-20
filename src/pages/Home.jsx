@@ -2,7 +2,6 @@ import ScheduleArea from "../components/ScheduleArea";
 import Slider from "../components/Slider";
 import FeaturesSection from "../components/FeaturesSection";
 import FunFacts from "../components/FunFacts";
-import WhyChoose from "../components/WhyChoose";
 import CallToAction from "../components/CallToAction";
 import Portfolio from "../components/Portfolio";
 import Service from "../components/Service";
@@ -12,6 +11,7 @@ import Clients from "../components/Clients";
 import Appointment from "../components/Appointment";
 import NewsletterArea from "../components/NewsletterArea";
 import ProcessingArea from "../components/ProcessingArea";
+import WhoWeAre from "../components/WhoWeAre";
 
 const Home = () => {
 	return (
@@ -21,7 +21,7 @@ const Home = () => {
 			<FeaturesSection />
 			<FunFacts />
 			<ProcessingArea />
-			<WhyChoose />
+			<WhoWeAre />
 			<CallToAction />
 			<Portfolio />
 			<Service />
