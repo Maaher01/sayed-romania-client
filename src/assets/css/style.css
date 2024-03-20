@@ -384,6 +384,7 @@ body {
 
 .header .logo {
 	float: left;
+	height: 75px;
 }
 .logo {
 	width: 10rem;

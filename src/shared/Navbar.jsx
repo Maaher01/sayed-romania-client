@@ -61,7 +61,10 @@ const Navbar = () => {
 					<div className="container">
 						<div className="inner">
 							<div className="row">
-								<div className="col-lg-3 col-md-3 col-12">
+								<div
+									className="col-lg-3 col-md-3 col-12"
+									style={{ background: "white", paddingBottom: "12px" }}
+								>
 									{/* Start Logo */}
 									<div className="logo">
 										<a href="/">
