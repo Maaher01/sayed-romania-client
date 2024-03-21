@@ -5,6 +5,7 @@ import PageNotFound from "./pages/PageNotFound";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ContactUs from "./pages/ContactUs";
 import PortfolioDetails from "./pages/PortfolioDetails";
+import ChairmanMsg from "./pages/ChairmanMsg";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path="contact-us" element={<ContactUs />} />
         <Route path="portfolio-details" element={<PortfolioDetails />} />
+        <Route path="chairman-msg" element={<ChairmanMsg />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
