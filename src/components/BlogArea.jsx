@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 const BlogArea = () => {
   const [blogData, setBlogData] = useState([]);
@@ -6,17 +7,10 @@ const BlogArea = () => {
   useEffect(() => {
     const fetchBlogData = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/newsfeed");
-        if (response.ok) {
-          const data = await response.json();
-          const activeBlogs = data.data.data.filter(
-            (blog) => blog._status === 1
-          );
-          setBlogData(activeBlogs);
-          //   console.log(data.data.data);
-        } else {
-          throw new Error("Failed to fetch blog data");
-        }
+        const response = await axios.get("http://localhost:8000/api/newsfeed");
+        const data = await response.data.data.data;
+        const activeBlogs = data.filter((blog) => blog._status === 1);
+        setBlogData(activeBlogs);
       } catch (error) {
         console.error("Error fetching blog data:", error);
       }

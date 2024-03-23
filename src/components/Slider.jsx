@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Slider = () => {
   const [currentSlider, setCurrentSlider] = useState(0);
@@ -8,16 +9,10 @@ const Slider = () => {
   useEffect(() => {
     const fetchSliderData = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/slider");
-        if (response.ok) {
-          const data = await response.json();
-          const activeSlides = data.data.data.filter(
-            (slider) => slider._status === 1
-          );
-          setSliderData(activeSlides);
-        } else {
-          throw new Error("Failed to fetch slider data");
-        }
+        const response = await axios.get("http://localhost:8000/api/slider");
+        const data = response.data.data.data;
+        const activeSlides = data.filter((slider) => slider._status === 1);
+        setSliderData(activeSlides);
       } catch (error) {
         console.error("Error fetching slider data:", error);
       }

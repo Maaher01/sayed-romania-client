@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 const CustomerReview = () => {
   const [reviewData, setReviewData] = useState([]);
@@ -6,14 +7,9 @@ const CustomerReview = () => {
   useEffect(() => {
     const fetchReviewData = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/review");
-        if (response.ok) {
-          const data = await response.json();
-          setReviewData(data.data.data);
-          console.log("Reviews", data.data.data);
-        } else {
-          throw new Error("Failed to fetch blog data");
-        }
+        const response = await axios.get("http://localhost:8000/api/review");
+        const data = await response.data.data.data;
+        setReviewData(data);
       } catch (error) {
         console.error("Error fetching blog data:", error);
       }

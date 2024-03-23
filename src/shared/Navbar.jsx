@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
 import CompanyContext from "../context/CompanyContext";
+import axios from "axios";
 
 const Navbar = () => {
   const { companyInfo } = useContext(CompanyContext);
@@ -9,17 +10,10 @@ const Navbar = () => {
   useEffect(() => {
     const fetchMenuData = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/menu");
-        if (response.ok) {
-          const data = await response.json();
-          const activeMenus = data.data.data.filter(
-            (menu) => menu._status === 1
-          );
-          setMenuData(activeMenus);
-          // console.log(companyInfo);
-        } else {
-          throw new Error("Failed to fetch blog data");
-        }
+        const response = await axios.get("http://localhost:8000/api/menu");
+        const data = response.data.data.data;
+        const activeMenus = data.filter((menu) => menu._status === 1);
+        setMenuData(activeMenus);
       } catch (error) {
         console.error("Error fetching blog data:", error);
       }
