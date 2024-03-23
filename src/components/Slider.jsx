@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const Slider = () => {
-  const [currentSlider, setCurrentSlider] = useState(0);
+  // const [currentSlider, setCurrentSlider] = useState(0);
   const [sliderData, setSliderData] = useState([]);
 
   useEffect(() => {
@@ -21,16 +21,16 @@ const Slider = () => {
     fetchSliderData();
   }, []);
 
-  const handleSliderTransition = () => {
-    const nextSlider =
-      currentSlider === sliderData.length - 1 ? 0 : currentSlider + 1;
-    setCurrentSlider(nextSlider);
-  };
+  // const handleSliderTransition = () => {
+  //   const nextSlider =
+  //     currentSlider === sliderData.length - 1 ? 0 : currentSlider + 1;
+  //   setCurrentSlider(nextSlider);
+  // };
 
-  useEffect(() => {
-    const interval = setInterval(handleSliderTransition, 2000);
-    return () => clearInterval(interval);
-  }, [currentSlider]);
+  // useEffect(() => {
+  //   const interval = setInterval(handleSliderTransition, 2000);
+  //   return () => clearInterval(interval);
+  // }, [currentSlider]);
 
   return (
     <section className="slider">
@@ -39,9 +39,10 @@ const Slider = () => {
         {sliderData.map((slider, index) => (
           <div
             key={index}
-            className={`single-slider ${
-              index === currentSlider ? "active" : ""
-            }`}
+            // className={`single-slider ${
+            //   index === currentSlider ? "active" : ""
+            // }`}
+            className="single-slider"
             style={{ backgroundImage: `url(${slider._image})` }}
           >
             <div className="container">

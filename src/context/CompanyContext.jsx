@@ -12,8 +12,8 @@ export const CompanyDataProvider = ({ children }) => {
   //Fetch company data
   useEffect(() => {
     if (data && data.data) {
-      setCompanyInfo(data.data);
-      // console.log(data.data);
+      setCompanyInfo(data.data[0]);
+      console.log(data.data[0]);
     }
   }, [data]);
 
