@@ -1,10 +1,34 @@
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 const NewsletterArea = () => {
+  const [newsletterData, setNewsletterData] = useState([]);
+
+  useEffect(() => {
+    const fetchNewsletterData = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/api/newsfeed");
+        if (response.ok) {
+          const data = await response.json();
+          setSliderData(data);
+          // console.log(data);
+        } else {
+          throw new Error("Failed to fetch slider data");
+        }
+      } catch (error) {
+        console.error("Error fetching slider data:", error);
+      }
+    };
+
+    fetchSliderData();
+  }, []);
+
   return (
     <div>
       <section className="newsletter section">
         <div className="container">
           <div className="row ">
-            <div className="col-lg-6  col-12">
+            <div className="col-lg-6 col-12">
               {/* Start Newsletter Form */}
               <div className="subscribe-text ">
                 <h6>Sign up for newsletter</h6>

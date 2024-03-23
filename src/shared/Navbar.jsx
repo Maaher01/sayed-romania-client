@@ -1,54 +1,54 @@
 import { Link } from "react-router-dom";
+import { useContext, useState, useEffect } from "react";
+import CompanyContext from "../context/CompanyContext";
 
 const Navbar = () => {
-  const topLinks = [
-    { text: "About Us", link: "portfolio-details" },
-    // { text: "Doctors" },
-    { text: "Contact Us", link: "contact-us" },
-    { text: "FAQ" },
-  ];
+  const { companyInfo } = useContext(CompanyContext);
+  const [menuData, setMenuData] = useState([]);
 
-  const navMenus = [
-    // { text: "Home", link: "/" },
-    // { text: "Doctors" },
-    { text: "Services" },
-    { text: "Pages" },
-    { text: "Blogs" },
-    { text: "Contact Us", link: "contact-us" },
-  ];
+  useEffect(() => {
+    const fetchMenuData = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/api/menu");
+        if (response.ok) {
+          const data = await response.json();
+          const activeMenus = data.data.data.filter(
+            (menu) => menu._status === 1
+          );
+          setMenuData(activeMenus);
+          // console.log(companyInfo);
+        } else {
+          throw new Error("Failed to fetch blog data");
+        }
+      } catch (error) {
+        console.error("Error fetching blog data:", error);
+      }
+    };
+
+    fetchMenuData();
+  }, [companyInfo]);
 
   return (
     <>
       {/* Header Area */}
       <header className="header">
+        {" "}
+        {/* Add key to parent div */}
         {/* Topbar */}
         <div className="topbar">
           <div className="container">
-            <div className="d-flex justify-content-between row">
-              <div className="col-lg-6 col-md-5 col-12">
-                {/* Contact */}
-                <ul className="top-link">
-                  {topLinks.map((link, index) => (
-                    <li key={index}>
-                      <Link to={link.link}>{link.text}</Link>
-                    </li>
-                  ))}
-                </ul>
-                {/* End Contact */}
-              </div>
+            <div className="d-flex justify-content-end row">
               <div className="col-lg-6 col-md-7 col-12">
                 {/* Top Contact */}
                 <ul className="top-contact">
                   <li>
                     <i className="fa fa-phone" />
-                    +880 1234 56789
+                    {companyInfo._phone}
                   </li>
-                  <li>
-                    <i className="fa fa-envelope" />
-                    <a href="mailto:support@yourmail.com">
-                      support@yourmail.com
-                    </a>
-                  </li>
+                  {/* <li>
+                        <i className="fa fa-envelope" />
+                        <a href={`mailto:${info._email}`}>{info._email}</a>
+                      </li> */}
                 </ul>
                 {/* End Top Contact */}
               </div>
@@ -68,7 +68,7 @@ const Navbar = () => {
                   {/* Start Logo */}
                   <div className="logo">
                     <a href="/">
-                      <img src="././src/assets/icons/logo_2.jpg" alt="#" />
+                      <img src={companyInfo._image} alt="#" />
                     </a>
                   </div>
                   {/* End Logo */}
@@ -81,9 +81,9 @@ const Navbar = () => {
                   <div className="main-menu">
                     <nav className="navigation">
                       <ul className="nav menu">
-                        {navMenus.map((link, index) => (
+                        {menuData.map((link, index) => (
                           <li key={index}>
-                            <Link to={link.link}>{link.text}</Link>
+                            <Link to={link._url}>{link._title}</Link>
                           </li>
                         ))}
                       </ul>
@@ -91,27 +91,6 @@ const Navbar = () => {
                   </div>
                   {/*/ End Main Menu */}
                 </div>
-                {/* <div className="col-lg-2 col-12">
-									<div className="subscribe-form">
-										<form
-											action="mail/mail.php"
-											method="get"
-											target="_blank"
-											className="newsletter-inner d-flex"
-										>
-											<input
-												name="EMAIL"
-												placeholder="Your passport number"
-												className="common-input"
-												onfocus="this.placeholder = ''"
-												onblur="this.placeholder = 'Your passport number'"
-												required=""
-												type="email"
-											/>
-											<button className="btn">Subscribe</button>
-										</form>
-									</div>
-								</div> */}
               </div>
             </div>
           </div>

@@ -14,24 +14,24 @@ import ProcessingArea from "../components/ProcessingArea";
 import WhoWeAre from "../components/WhoWeAre";
 
 const Home = () => {
-	return (
-		<div>
-			<Slider />
-			<ScheduleArea />
-			<FeaturesSection />
-			<FunFacts />
-			<ProcessingArea />
-			<WhoWeAre />
-			<CallToAction />
-			<Portfolio />
-			<Service />
-			{/* <PricingTable /> */}
-			<BlogArea />
-			<Clients />
-			<Appointment />
-			<NewsletterArea />
-		</div>
-	);
+  return (
+    <div>
+      <Slider />
+      <ScheduleArea />
+      <FeaturesSection />
+      <FunFacts />
+      <ProcessingArea />
+      <WhoWeAre />
+      <CallToAction />
+      <Portfolio />
+      <Service />
+      {/* <PricingTable /> */}
+      <BlogArea />
+      <Clients />
+      <Appointment />
+      {/* <NewsletterArea /> */}
+    </div>
+  );
 };
 
 export default Home;

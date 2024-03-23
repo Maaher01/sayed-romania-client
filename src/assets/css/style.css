@@ -1310,7 +1310,7 @@ body {
   height: 100%;
   width: 100%;
 }
-.portfolio .single-pf:before {
+/* .portfolio .single-pf:before {
   position: absolute;
   content: "";
   left: 0;
@@ -1324,7 +1324,7 @@ body {
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
   z-index: 1;
-}
+} */
 .portfolio .single-pf:hover:before {
   opacity: 0.7;
   visibility: visible;
@@ -2924,7 +2924,7 @@ body {
 ============================*/
 .appointment {
   background: #fff;
-  padding-top: 100px;
+  padding: 100px 0;
 }
 .appointment.single-page {
   background: #fff;
