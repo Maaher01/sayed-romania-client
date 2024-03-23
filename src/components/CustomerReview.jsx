@@ -26,6 +26,10 @@ const CustomerReview = () => {
             <div className="col-lg-12">
               <div className="section-title">
                 <h2>Our Happy Customers</h2>
+                <i
+                  className="icofont-airplane-alt"
+                  style={{ fontSize: "24px", color: "#002a7b" }}
+                ></i>
               </div>
             </div>
           </div>
