@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import MenuContext from "../context/MenuContext";
 
 const Footer = () => {
+  const { menus } = useContext(MenuContext);
+
   return (
     <div>
       <footer id="footer" className="footer ">
@@ -8,7 +12,7 @@ const Footer = () => {
         <div className="footer-top">
           <div className="container">
             <div className="row">
-              <div className="col-lg-4 col-md-6 col-12">
+              <div className="col-md-6 col-12">
                 <div className="single-footer">
                   <h2>About Us</h2>
                   <p>
@@ -46,60 +50,26 @@ const Footer = () => {
                   {/* End Social */}
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 col-12">
+              <div className="col-md-6 col-12">
                 <div className="single-footer f-link">
                   <h2>Quick Links</h2>
                   <div className="row">
                     <div className="col-lg-6 col-md-6 col-12">
                       <ul>
-                        <li>
-                          <a href="#">
-                            <i
-                              className="fa fa-caret-right"
-                              aria-hidden="true"
-                            />
-                            Home
-                          </a>
-                        </li>
-                        <li>
-                          <Link to="portfolioDetail">
-                            <i
-                              className="fa fa-caret-right"
-                              aria-hidden="true"
-                            />
-                            About Us
-                          </Link>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i
-                              className="fa fa-caret-right"
-                              aria-hidden="true"
-                            />
-                            Services
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i
-                              className="fa fa-caret-right"
-                              aria-hidden="true"
-                            />
-                            Our Cases
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i
-                              className="fa fa-caret-right"
-                              aria-hidden="true"
-                            />
-                            Other Links
-                          </a>
-                        </li>
+                        {menus.map((link, index) => (
+                          <li>
+                            <Link to={link._url}>
+                              <i
+                                className="fa fa-caret-right"
+                                aria-hidden="true"
+                              />
+                              {link._title}
+                            </Link>
+                          </li>
+                        ))}
                       </ul>
                     </div>
-                    <div className="col-lg-6 col-md-6 col-12">
+                    {/* <div className="col-lg-6 col-md-6 col-12">
                       <ul>
                         <li>
                           <a href="#">
@@ -147,7 +117,7 @@ const Footer = () => {
                           </Link>
                         </li>
                       </ul>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -171,7 +141,7 @@ const Footer = () => {
                   </ul>
                 </div>
               </div> */}
-              <div className="col-lg-4 col-md-6 col-12">
+              {/* <div className="col-lg-4 col-md-6 col-12">
                 <div className="single-footer">
                   <h2>Newsletter</h2>
                   <p>
@@ -199,7 +169,7 @@ const Footer = () => {
                     </button>
                   </form>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

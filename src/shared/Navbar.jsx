@@ -1,26 +1,11 @@
 import { Link } from "react-router-dom";
-import { useContext, useState, useEffect } from "react";
+import { useContext } from "react";
 import CompanyContext from "../context/CompanyContext";
-import axios from "axios";
+import MenuContext from "../context/MenuContext";
 
 const Navbar = () => {
   const { companyInfo } = useContext(CompanyContext);
-  const [menuData, setMenuData] = useState([]);
-
-  useEffect(() => {
-    const fetchMenuData = async () => {
-      try {
-        const response = await axios.get("http://localhost:8000/api/menu");
-        const data = response.data.data.data;
-        const activeMenus = data.filter((menu) => menu._status === 1);
-        setMenuData(activeMenus);
-      } catch (error) {
-        console.error("Error fetching blog data:", error);
-      }
-    };
-
-    fetchMenuData();
-  }, [companyInfo]);
+  const { menus } = useContext(MenuContext);
 
   return (
     <>
@@ -54,7 +39,7 @@ const Navbar = () => {
         <div className="header-inner">
           <div className="container">
             <div className="inner">
-              <div className="row">
+              <div className="row d-flex justify-content-between">
                 <div
                   className="col-lg-3 col-md-3 col-12"
                   style={{ background: "white" }}
@@ -74,8 +59,8 @@ const Navbar = () => {
                   {/* Main Menu */}
                   <div className="main-menu">
                     <nav className="navigation">
-                      <ul className="nav menu">
-                        {menuData.map((link, index) => (
+                      <ul className="nav menu d-flex justify-content-end">
+                        {menus.map((link, index) => (
                           <li key={index}>
                             <Link to={link._url}>{link._title}</Link>
                           </li>

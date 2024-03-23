@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { baseUrl } from "../api/api";
 
 const CustomerReview = () => {
   const [reviewData, setReviewData] = useState([]);
@@ -7,11 +8,11 @@ const CustomerReview = () => {
   useEffect(() => {
     const fetchReviewData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/review");
+        const response = await axios.get(`${baseUrl}/review`);
         const data = await response.data.data.data;
         setReviewData(data);
       } catch (error) {
-        console.error("Error fetching blog data:", error);
+        console.error("Error fetching review data:", error);
       }
     };
 

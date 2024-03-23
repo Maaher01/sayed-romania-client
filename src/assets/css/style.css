@@ -741,15 +741,17 @@ body {
   width: 100%;
   margin-top: -25px;
 }
-.slider .owl-carousel .owl-nav div {
+.slider .owl-carousel .owl-nav .owl-prev {
   height: 50px;
   width: 50px;
   line-height: 50px;
   text-align: center;
-  background: #002a7b;
+  background: #c81025;
+  left: 20px;
   color: #fff;
-  font-size: 26px;
+  font-size: 40px;
   position: absolute;
+  border: none;
   margin: 0;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -757,17 +759,34 @@ body {
   padding: 0;
   border-radius: 50%;
 }
-.slider .owl-carousel .owl-nav div:hover {
+
+.slider .owl-carousel .owl-nav .owl-next {
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #c81025;
+  right: 20px;
+  color: #fff;
+  font-size: 40px;
+  position: absolute;
+  margin: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+}
+
+.slider .owl-carousel .owl-nav .owl-prev:hover {
   background: #2c2d3f;
   color: #fff;
 }
-.slider .owl-carousel .owl-controls .owl-nav .owl-prev {
-  left: 20px;
-  background: #c81025;
-}
-.slider .owl-carousel .owl-controls .owl-nav .owl-next {
-  right: 20px;
-  background: #c81025;
+
+.slider .owl-carousel .owl-nav .owl-next:hover {
+  background: #2c2d3f;
+  color: #fff;
 }
 
 /* Slider Animation */

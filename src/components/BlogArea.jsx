@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { baseUrl } from "../api/api";
 
 const BlogArea = () => {
   const [blogData, setBlogData] = useState([]);
@@ -7,7 +8,7 @@ const BlogArea = () => {
   useEffect(() => {
     const fetchBlogData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/newsfeed");
+        const response = await axios.get(`${baseUrl}/newsfeed`);
         const data = await response.data.data.data;
         const activeBlogs = data.filter((blog) => blog._status === 1);
         setBlogData(activeBlogs);

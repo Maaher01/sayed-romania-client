@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { baseUrl } from "../api/api";
+import OwlCarousel from "react-owl-carousel";
 
 const Slider = () => {
-  // const [currentSlider, setCurrentSlider] = useState(0);
   const [sliderData, setSliderData] = useState([]);
 
   useEffect(() => {
     const fetchSliderData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/slider");
+        const response = await axios.get(`${baseUrl}/slider`);
         const data = response.data.data.data;
         const activeSlides = data.filter((slider) => slider._status === 1);
         setSliderData(activeSlides);
@@ -21,29 +22,24 @@ const Slider = () => {
     fetchSliderData();
   }, []);
 
-  // const handleSliderTransition = () => {
-  //   const nextSlider =
-  //     currentSlider === sliderData.length - 1 ? 0 : currentSlider + 1;
-  //   setCurrentSlider(nextSlider);
-  // };
-
-  // useEffect(() => {
-  //   const interval = setInterval(handleSliderTransition, 2000);
-  //   return () => clearInterval(interval);
-  // }, [currentSlider]);
-
   return (
     <section className="slider">
-      <div className="hero-slider">
+      <OwlCarousel
+        className="hero-slider"
+        loop
+        autoplay
+        autoplayTimeout={3500}
+        nav
+        items={1}
+      >
         {/* Map through slider data */}
         {sliderData.map((slider, index) => (
           <div
             key={index}
-            // className={`single-slider ${
-            //   index === currentSlider ? "active" : ""
-            // }`}
             className="single-slider"
-            style={{ backgroundImage: `url(${slider._image})` }}
+            style={{
+              backgroundImage: `url(${slider._image})`,
+            }}
           >
             <div className="container">
               <div className="row">
@@ -54,7 +50,7 @@ const Slider = () => {
                     </h1>
                     <p>{slider._subtitle}</p>
                     <div className="button">
-                      <Link to="portfolio-details" className="btn">
+                      <Link to="portfolioDetail" className="btn">
                         About Us
                       </Link>
                       <Link to="contact-us" className="btn primary">
@@ -67,7 +63,7 @@ const Slider = () => {
             </div>
           </div>
         ))}
-      </div>
+      </OwlCarousel>
     </section>
   );
 };
