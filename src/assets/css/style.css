@@ -704,7 +704,7 @@ body {
 	color: #c81025;
 }
 .slider .single-slider p {
-	color: white;
+	color: #2c2d3f;
 	margin-top: 27px;
 	font-weight: 600;
 }
@@ -2252,7 +2252,6 @@ body {
 	padding: 30px;
 	left: 0;
 	z-index: 0;
-	padding: 20px;
 }
 .blog .single-news .news-content:before {
 	position: absolute;
@@ -2302,7 +2301,7 @@ body {
 	color: #2c2d3f;
 }
 .blog .single-news .news-content .name {
-	font-size: 13px;
+	font-size: 14px;
 }
 .blog .single-news .news-body .date {
 	display: inline-block;

@@ -3,73 +3,73 @@ import { useContext } from "react";
 import MenuContext from "../context/MenuContext";
 
 const Footer = () => {
-  const { menus } = useContext(MenuContext);
+	const { menus } = useContext(MenuContext);
 
-  return (
-    <div>
-      <footer id="footer" className="footer ">
-        {/* Footer Top */}
-        <div className="footer-top">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-6 col-12">
-                <div className="single-footer">
-                  <h2>About Us</h2>
-                  <p>
-                    Lorem ipsum dolor sit am consectetur adipisicing elit do
-                    eiusmod tempor incididunt ut labore dolore magna.
-                  </p>
-                  {/* Social */}
-                  <ul className="social">
-                    <li>
-                      <a href="#">
-                        <i className="icofont-facebook" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="icofont-google-plus" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="icofont-twitter" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="icofont-vimeo" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="icofont-pinterest" />
-                      </a>
-                    </li>
-                  </ul>
-                  {/* End Social */}
-                </div>
-              </div>
-              <div className="col-md-6 col-12">
-                <div className="single-footer f-link">
-                  <h2>Quick Links</h2>
-                  <div className="row">
-                    <div className="col-lg-6 col-md-6 col-12">
-                      <ul>
-                        {menus.map((link, index) => (
-                          <li>
-                            <Link to={link._url}>
-                              <i
-                                className="fa fa-caret-right"
-                                aria-hidden="true"
-                              />
-                              {link._title}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    {/* <div className="col-lg-6 col-md-6 col-12">
+	return (
+		<div>
+			<footer id="footer" className="footer ">
+				{/* Footer Top */}
+				<div className="footer-top">
+					<div className="container">
+						<div className="row">
+							<div className="col-md-6 col-12">
+								<div className="single-footer">
+									<h2>About Us</h2>
+									<p>
+										Lorem ipsum dolor sit am consectetur adipisicing elit do
+										eiusmod tempor incididunt ut labore dolore magna.
+									</p>
+									{/* Social */}
+									<ul className="social">
+										<li>
+											<a href="#">
+												<i className="icofont-facebook" />
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i className="icofont-google-plus" />
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i className="icofont-twitter" />
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i className="icofont-vimeo" />
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<i className="icofont-pinterest" />
+											</a>
+										</li>
+									</ul>
+									{/* End Social */}
+								</div>
+							</div>
+							<div className="col-md-6 col-12">
+								<div className="single-footer f-link">
+									<h2>Quick Links</h2>
+									<div className="row">
+										<div className="col-lg-6 col-md-6 col-12">
+											<ul>
+												{menus.map((link, index) => (
+													<li key={index}>
+														<Link to={link._url}>
+															<i
+																className="fa fa-caret-right"
+																aria-hidden="true"
+															/>
+															{link._title}
+														</Link>
+													</li>
+												))}
+											</ul>
+										</div>
+										{/* <div className="col-lg-6 col-md-6 col-12">
                       <ul>
                         <li>
                           <a href="#">
@@ -118,10 +118,10 @@ const Footer = () => {
                         </li>
                       </ul>
                     </div> */}
-                  </div>
-                </div>
-              </div>
-              {/* <div className="col-lg-3 col-md-6 col-12">
+									</div>
+								</div>
+							</div>
+							{/* <div className="col-lg-3 col-md-6 col-12">
                 <div className="single-footer">
                   <h2>Open Hours</h2>
                   <p>
@@ -141,7 +141,7 @@ const Footer = () => {
                   </ul>
                 </div>
               </div> */}
-              {/* <div className="col-lg-4 col-md-6 col-12">
+							{/* <div className="col-lg-4 col-md-6 col-12">
                 <div className="single-footer">
                   <h2>Newsletter</h2>
                   <p>
@@ -170,31 +170,31 @@ const Footer = () => {
                   </form>
                 </div>
               </div> */}
-            </div>
-          </div>
-        </div>
-        {/*/ End Footer Top */}
-        {/* Copyright */}
-        <div className="copyright">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12 col-md-12 col-12">
-                <div className="copyright-content">
-                  <p>
-                    © Copyright 2024 | All Rights Reserved by{" "}
-                    <a href="https://www.softintechnology.com" target="_blank">
-                      softintechnology.com
-                    </a>{" "}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/*/ End Copyright */}
-      </footer>
-    </div>
-  );
+						</div>
+					</div>
+				</div>
+				{/*/ End Footer Top */}
+				{/* Copyright */}
+				<div className="copyright">
+					<div className="container">
+						<div className="row">
+							<div className="col-lg-12 col-md-12 col-12">
+								<div className="copyright-content">
+									<p>
+										© Copyright 2024 | All Rights Reserved by{" "}
+										<a href="https://www.softintechnology.com" target="_blank">
+											softintechnology.com
+										</a>{" "}
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{/*/ End Copyright */}
+			</footer>
+		</div>
+	);
 };
 
 export default Footer;

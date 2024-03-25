@@ -5,32 +5,31 @@ import { baseUrl } from "../api/api";
 const MenuContext = createContext({});
 
 export const MenuDataProvider = ({ children }) => {
-  const [menus, setMenus] = useState([]);
-  const { data, isLoading, fetchError } = useAxiosFetch(`${baseUrl}/menu`);
+	const [menus, setMenus] = useState([]);
+	const { data, isLoading, fetchError } = useAxiosFetch(`${baseUrl}/menu`);
 
-  //Fetch company data
-  useEffect(() => {
-    if (data && data.data) {
-      const activeSlides = data.data.data.filter(
-        (slider) => slider._status === 1
-      );
-      setMenus(activeSlides);
-      console.log(activeSlides);
-    }
-  }, [data]);
+	//Fetch company data
+	useEffect(() => {
+		if (data && data.data) {
+			const activeMenus = data.data.data.filter(
+				(slider) => slider._status === 1
+			);
+			setMenus(activeMenus);
+		}
+	}, [data]);
 
-  return (
-    <MenuContext.Provider
-      value={{
-        menus,
-        setMenus,
-        fetchError,
-        isLoading,
-      }}
-    >
-      {children}
-    </MenuContext.Provider>
-  );
+	return (
+		<MenuContext.Provider
+			value={{
+				menus,
+				setMenus,
+				fetchError,
+				isLoading,
+			}}
+		>
+			{children}
+		</MenuContext.Provider>
+	);
 };
 
 export default MenuContext;
