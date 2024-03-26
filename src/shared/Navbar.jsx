@@ -66,9 +66,9 @@ const Navbar = () => {
 								>
 									{/* Start Logo */}
 									<div className="logo">
-										<a href="/">
+										<Link to="/">
 											<img src={companyInfo._image} alt="#" />
-										</a>
+										</Link>
 									</div>
 									{/* End Logo */}
 									{/* Mobile Nav */}

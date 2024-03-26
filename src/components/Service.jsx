@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Service = () => {
 	const servicesData = [
 		{
@@ -45,7 +47,7 @@ const Service = () => {
 								<div className="single-service">
 									<i className={service.iconClass} />
 									<h4>
-										<a href={service.link}>{service.title}</a>
+										<Link to={service.link}>{service.title}</Link>
 									</h4>
 									<p>{service.description}</p>
 								</div>

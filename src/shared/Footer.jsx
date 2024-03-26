@@ -22,29 +22,29 @@ const Footer = () => {
 									{/* Social */}
 									<ul className="social">
 										<li>
-											<a href="#">
+											<Link>
 												<i className="icofont-facebook" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link>
 												<i className="icofont-google-plus" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link>
 												<i className="icofont-twitter" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link>
 												<i className="icofont-vimeo" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link>
 												<i className="icofont-pinterest" />
-											</a>
+											</Link>
 										</li>
 									</ul>
 									{/* End Social */}
