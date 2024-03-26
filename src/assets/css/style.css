@@ -420,7 +420,6 @@ body {
 	padding: 25px 12px;
 	position: relative;
 	display: inline-block;
-	position: relative;
 	text-decoration: none;
 }
 .header .nav li a::before {
@@ -438,11 +437,7 @@ body {
 	-moz-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 }
-.header .nav li.active a:before {
-	opacity: 1;
-	visibility: visible;
-	width: 100%;
-}
+
 .header .nav li.active a {
 	color: #002a7b;
 }
