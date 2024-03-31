@@ -1,69 +1,73 @@
-const ScheduleArea = () => {
-	const schedules = [
-		{
-			iconClass: "icofont-folder",
-			title: "Analysis of Customer Requirements",
-			description: "Accross all major countries",
-		},
-		{
-			iconClass: "icofont-prescription",
-			title: "Project Design and Outsourcing",
-			description: "Straight to the point",
-		},
-		{
-			iconClass: "icofont-business-man-alt-1",
-			title: "Cooperation with embassy and recruitment channels",
-			description: "Prestigious jobs guaranteed",
-		},
-	];
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { baseUrl } from "../api/api";
 
-	return (
-		<section className="schedule">
-			<div className="container">
-				<div className="schedule-inner">
-					<div className="row">
-						{schedules.map((schedule, index) => (
-							<div key={index} className="col-lg-4 col-md-6 col-12">
-								<div
-									className={`single-schedule ${
-										index === 0
-											? "first"
-											: index === schedules.length - 1
-											? "last"
-											: "middle"
-									}`}
-								>
-									<div className="inner">
-										<div className="icon">
-											<i className={schedule.iconClass} />
-										</div>
-										<div className="single-content">
-											{/* <span>{schedule.title}</span> */}
-											<h4>{schedule.title}</h4>
-											{schedule.description && <p>{schedule.description}</p>}
-											{schedule.timeSlots && (
-												<ul className="time-sidual">
-													{schedule.timeSlots.map((timeSlot, i) => (
-														<li key={i} className="day">
-															{timeSlot.day} <span>{timeSlot.time}</span>
-														</li>
-													))}
-												</ul>
-											)}
-											{/* <a href="#">
+const ScheduleArea = () => {
+  const [features, setFeatures] = useState([]);
+
+  useEffect(() => {
+    const fetchFeatures = async () => {
+      try {
+        const response = await axios.get(`${baseUrl}/section`);
+        const data = response.data.data.data;
+        const featureSection = data.filter((section) => section._menuid === 7);
+        console.log(featureSection);
+        setFeatures(featureSection);
+      } catch (error) {
+        console.error("Error fetching video data:", error);
+      }
+    };
+
+    fetchFeatures();
+  }, []);
+
+  return (
+    <section className="schedule">
+      <div className="container">
+        <div className="schedule-inner">
+          <div className="row">
+            {features.map((feature, index) => (
+              <div key={index} className="col-lg-4 col-md-6 col-12">
+                <div
+                  className={`single-schedule ${
+                    index === 0
+                      ? "first"
+                      : index === features.length - 1
+                      ? "last"
+                      : "middle"
+                  }`}
+                >
+                  <div className="inner">
+                    <div className="icon">
+                      <i className={feature._description} />
+                    </div>
+                    <div className="single-content">
+                      {/* <span>{schedule.title}</span> */}
+                      <h4>{feature._title}</h4>
+                      <p>{feature._subtitle}</p>
+                      {/* {schedule.timeSlots && (
+                        <ul className="time-sidual">
+                          {schedule.timeSlots.map((timeSlot, i) => (
+                            <li key={i} className="day">
+                              {timeSlot.day} <span>{timeSlot.time}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )} */}
+                      {/* <a href="#">
 												LEARN MORE
 												<i className="fa fa-long-arrow-right" />
 											</a> */}
-										</div>
-									</div>
-								</div>
-							</div>
-						))}
-					</div>
-				</div>
-			</div>
-		</section>
-	);
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default ScheduleArea;
