@@ -11,58 +11,40 @@ const ScheduleArea = () => {
         const response = await axios.get(`${baseUrl}/section`);
         const data = response.data.data.data;
         const featureSection = data.filter((section) => section._menuid === 7);
-        console.log(featureSection);
         setFeatures(featureSection);
       } catch (error) {
-        console.error("Error fetching video data:", error);
+        console.error("Error fetching feature data:", error);
       }
     };
 
     fetchFeatures();
   }, []);
 
+  const colors = ["first", "middle", "last"];
+
   return (
     <section className="schedule">
       <div className="container">
         <div className="schedule-inner">
           <div className="row">
-            {features.map((feature, index) => (
-              <div key={index} className="col-lg-4 col-md-6 col-12">
-                <div
-                  className={`single-schedule ${
-                    index === 0
-                      ? "first"
-                      : index === features.length - 1
-                      ? "last"
-                      : "middle"
-                  }`}
-                >
-                  <div className="inner">
-                    <div className="icon">
-                      <i className={feature._description} />
-                    </div>
-                    <div className="single-content">
-                      {/* <span>{schedule.title}</span> */}
-                      <h4>{feature._title}</h4>
-                      <p>{feature._subtitle}</p>
-                      {/* {schedule.timeSlots && (
-                        <ul className="time-sidual">
-                          {schedule.timeSlots.map((timeSlot, i) => (
-                            <li key={i} className="day">
-                              {timeSlot.day} <span>{timeSlot.time}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      )} */}
-                      {/* <a href="#">
-												LEARN MORE
-												<i className="fa fa-long-arrow-right" />
-											</a> */}
+            {features.map((feature, index) => {
+              const colorClass = colors[index % colors.length];
+              return (
+                <div key={index} className="col-lg-4 col-md-6 col-12">
+                  <div className={`single-schedule ${colorClass}`}>
+                    <div className="inner">
+                      <div className="icon">
+                        <i className={feature._description} />
+                      </div>
+                      <div className="single-content">
+                        <h4>{feature._title}</h4>
+                        <p>{feature._subtitle}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

@@ -12,7 +12,6 @@ const WhoWeAre = () => {
         const response = await axios.get(`${baseUrl}/section`);
         const data = response.data.data.data;
         const videoSection = data.filter((section) => section._menuid === 8);
-        console.log(videoSection);
         setVideo(videoSection);
       } catch (error) {
         console.error("Error fetching video data:", error);
