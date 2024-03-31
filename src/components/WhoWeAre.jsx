@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import { baseUrl } from "../api/api";
 import ReactPlayer from 'react-player'
@@ -13,9 +12,7 @@ const WhoWeAre = () => {
 				const response = await axios.get(`${baseUrl}/section`);
 				const data = response.data.data.data;
 				const videoSection = data.filter((section) => section._title === "Video");
-				// console.log(videoSection)
 				setVideo(videoSection);
-				// console.log("Video", video);
 			} catch (error) {
 				console.error("Error fetching video data:", error);
 			}
@@ -98,20 +95,9 @@ const WhoWeAre = () => {
 							<div className="choose-right">
 							{video.length > 0 && (
 								<div className="video-image">
-									{/* Video Animation */}
+									{/* Video Area */}
 									<ReactPlayer url={video[0]._videourl} style={{ width:"550px", height: "300px" }} controls="true" />
-									{/* <video controls width="550" height="300">
-  										<source src={video[0]._videourl} type="video/webm" />
-									</video> */}
-									{/*/ End Video Animation */}
-									{/* {video.length > 0 && video[0]._videourl && (
-									<Link
-										to={video[0]._videourl}
-										className="video video-popup mfp-iframe"
-									>
-										<i className="fa fa-play" />
-									</Link>
-									)} */}
+									{/*/ End Video Area */}
 								</div>
 							)}
 							</div>
