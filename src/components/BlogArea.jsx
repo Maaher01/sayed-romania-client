@@ -46,7 +46,7 @@ const BlogArea = () => {
             </div>
           </div>
           <div className="row">
-            {blogData.map((blog, index) => (
+            {blogData?.map((blog, index) => (
               <div key={index} className="col-lg-4 col-md-6 col-12">
                 <div className="single-news">
                   <div className="news-head">

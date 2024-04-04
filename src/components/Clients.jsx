@@ -42,7 +42,7 @@ const Clients = () => {
               }}
             >
               {/* Map through slider data */}
-              {clients.map((client, index) => (
+              {clients?.map((client, index) => (
                 <div key={index} className="single-clients">
                   <img
                     src={client._image}

@@ -35,7 +35,7 @@ const CustomerReview = () => {
             </div>
           </div>
           <div className="row">
-            {reviewData.map((review, index) => (
+            {reviewData?.map((review, index) => (
               <div key={index} className="col-lg-4 col-md-6 col-12">
                 <div className="single-news">
                   <div className="news-head">

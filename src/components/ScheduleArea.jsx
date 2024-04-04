@@ -27,7 +27,7 @@ const ScheduleArea = () => {
       <div className="container">
         <div className="schedule-inner">
           <div className="row">
-            {features.map((feature, index) => {
+            {features?.map((feature, index) => {
               const colorClass = colors[index % colors.length];
               return (
                 <div key={index} className="col-lg-4 col-md-6 col-12">

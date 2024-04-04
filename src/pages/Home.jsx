@@ -12,12 +12,14 @@ import Appointment from "../components/Appointment";
 import NewsletterArea from "../components/NewsletterArea";
 import ProcessingArea from "../components/ProcessingArea";
 import WhoWeAre from "../components/WhoWeAre";
+import NoticeArea from "../components/NoticeArea";
 
 const Home = () => {
   return (
     <div>
       <Slider />
       <ScheduleArea />
+      <NoticeArea />
       <FeaturesSection />
       <FunFacts />
       <ProcessingArea />
