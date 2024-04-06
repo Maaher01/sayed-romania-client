@@ -77,137 +77,137 @@ Version:	1.1
     /*===============================
 			Hero Slider JS
 		=================================*/
-    $(".hero-slider").owlCarousel({
-      loop: true,
-      autoplay: true,
-      smartSpeed: 500,
-      autoplayTimeout: 3500,
-      singleItem: true,
-      autoplayHoverPause: true,
-      items: 1,
-      nav: true,
-      navText: [
-        '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-        '<i class="fa fa-angle-right" aria-hidden="true"></i>',
-      ],
-      dots: false,
-    });
+    // $(".hero-slider").owlCarousel({
+    //   loop: true,
+    //   autoplay: true,
+    //   smartSpeed: 500,
+    //   autoplayTimeout: 3500,
+    //   singleItem: true,
+    //   autoplayHoverPause: true,
+    //   items: 1,
+    //   nav: true,
+    //   navText: [
+    //     '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+    //     '<i class="fa fa-angle-right" aria-hidden="true"></i>',
+    //   ],
+    //   dots: false,
+    // });
 
     /*===============================
 			Testimonial Slider JS
 		=================================*/
-    $(".testimonial-slider").owlCarousel({
-      items: 3,
-      autoplay: true,
-      autoplayTimeout: 4500,
-      smartSpeed: 300,
-      autoplayHoverPause: true,
-      loop: true,
-      merge: true,
-      nav: false,
-      dots: true,
-      responsive: {
-        1: {
-          items: 1,
-        },
-        300: {
-          items: 1,
-        },
-        480: {
-          items: 1,
-        },
-        768: {
-          items: 2,
-        },
-        1170: {
-          items: 3,
-        },
-      },
-    });
+    // $(".testimonial-slider").owlCarousel({
+    //   items: 3,
+    //   autoplay: true,
+    //   autoplayTimeout: 4500,
+    //   smartSpeed: 300,
+    //   autoplayHoverPause: true,
+    //   loop: true,
+    //   merge: true,
+    //   nav: false,
+    //   dots: true,
+    //   responsive: {
+    //     1: {
+    //       items: 1,
+    //     },
+    //     300: {
+    //       items: 1,
+    //     },
+    //     480: {
+    //       items: 1,
+    //     },
+    //     768: {
+    //       items: 2,
+    //     },
+    //     1170: {
+    //       items: 3,
+    //     },
+    //   },
+    // });
 
     /*===============================
 			Portfolio Slider JS
 		=================================*/
-    $(".portfolio-slider").owlCarousel({
-      autoplay: true,
-      autoplayTimeout: 4000,
-      margin: 15,
-      smartSpeed: 300,
-      autoplayHoverPause: true,
-      loop: true,
-      nav: true,
-      dots: false,
-      responsive: {
-        300: {
-          items: 1,
-        },
-        480: {
-          items: 2,
-        },
-        768: {
-          items: 2,
-        },
-        1170: {
-          items: 4,
-        },
-      },
-    });
+    // $(".portfolio-slider").owlCarousel({
+    //   autoplay: true,
+    //   autoplayTimeout: 4000,
+    //   margin: 15,
+    //   smartSpeed: 300,
+    //   autoplayHoverPause: true,
+    //   loop: true,
+    //   nav: true,
+    //   dots: false,
+    //   responsive: {
+    //     300: {
+    //       items: 1,
+    //     },
+    //     480: {
+    //       items: 2,
+    //     },
+    //     768: {
+    //       items: 2,
+    //     },
+    //     1170: {
+    //       items: 4,
+    //     },
+    //   },
+    // });
 
     /*=====================================
 			Counter Up JS
 		======================================*/
-    $(".counter").counterUp({
-      delay: 20,
-      time: 2000,
-    });
+    // $(".counter").counterUp({
+    //   delay: 20,
+    //   time: 2000,
+    // });
 
     /*===============================
 			Clients Slider JS
 		=================================*/
-    $(".clients-slider").owlCarousel({
-      items: 5,
-      autoplay: true,
-      autoplayTimeout: 3500,
-      margin: 15,
-      smartSpeed: 400,
-      autoplayHoverPause: true,
-      loop: true,
-      nav: false,
-      dots: false,
-      responsive: {
-        300: {
-          items: 1,
-        },
-        480: {
-          items: 2,
-        },
-        768: {
-          items: 3,
-        },
-        1170: {
-          items: 5,
-        },
-      },
-    });
+    // $(".clients-slider").owlCarousel({
+    //   items: 5,
+    //   autoplay: true,
+    //   autoplayTimeout: 3500,
+    //   margin: 15,
+    //   smartSpeed: 400,
+    //   autoplayHoverPause: true,
+    //   loop: true,
+    //   nav: false,
+    //   dots: false,
+    //   responsive: {
+    //     300: {
+    //       items: 1,
+    //     },
+    //     480: {
+    //       items: 2,
+    //     },
+    //     768: {
+    //       items: 3,
+    //     },
+    //     1170: {
+    //       items: 5,
+    //     },
+    //   },
+    // });
 
     /*====================================
 			Single Portfolio Slider JS
 		======================================*/
-    $(".pf-details-slider").owlCarousel({
-      items: 1,
-      autoplay: false,
-      autoplayTimeout: 5000,
-      smartSpeed: 400,
-      autoplayHoverPause: true,
-      loop: true,
-      merge: true,
-      nav: true,
-      dots: false,
-      navText: [
-        '<i class="icofont-rounded-left"></i>',
-        '<i class="icofont-rounded-right"></i>',
-      ],
-    });
+    // $(".pf-details-slider").owlCarousel({
+    //   items: 1,
+    //   autoplay: false,
+    //   autoplayTimeout: 5000,
+    //   smartSpeed: 400,
+    //   autoplayHoverPause: true,
+    //   loop: true,
+    //   merge: true,
+    //   nav: true,
+    //   dots: false,
+    //   navText: [
+    //     '<i class="icofont-rounded-left"></i>',
+    //     '<i class="icofont-rounded-right"></i>',
+    //   ],
+    // });
 
     /*===================
 			Accordion JS

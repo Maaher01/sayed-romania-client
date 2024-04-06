@@ -99,7 +99,7 @@ const WhoWeAre = () => {
                   <ReactPlayer
                     url={video[0]._videourl}
                     style={{ maxWidth: "100%", height: "auto" }}
-                    controls="true"
+                    controls={true}
                   />
                   {/*/ End Video Area */}
                 </div>

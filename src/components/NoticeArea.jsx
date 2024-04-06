@@ -12,7 +12,6 @@ const NoticeArea = () => {
         const response = await axios.get(`${baseUrl}/section`);
         const data = response.data.data.data;
         const noticeSection = data.filter((section) => section._menuid === 9);
-        console.log(noticeSection);
         setNotice(noticeSection);
       } catch (error) {
         console.error("Error fetching notice data:", error);
