@@ -9,7 +9,7 @@ const ScheduleArea = () => {
     const fetchFeatures = async () => {
       try {
         const response = await axios.get(`${baseUrl}/section`);
-        const data = response.data.data.data;
+        const data = await response.data.data.data;
         const featureSection = data.filter((section) => section._menuid === 7);
         setFeatures(featureSection);
       } catch (error) {

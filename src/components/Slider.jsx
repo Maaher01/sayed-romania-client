@@ -11,7 +11,7 @@ const Slider = () => {
     const fetchSliderData = async () => {
       try {
         const response = await axios.get(`${baseUrl}/slider`);
-        const data = response.data.data.data;
+        const data = await response.data.data.data;
         const activeSlides = data.filter((slider) => slider._status === 1);
         setSliderData(activeSlides);
       } catch (error) {

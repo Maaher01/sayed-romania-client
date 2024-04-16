@@ -10,7 +10,7 @@ const Portfolio = () => {
     const fetchRecentVisa = async () => {
       try {
         const response = await axios.get(`${baseUrl}/recentvisasuccess`);
-        const data = response.data.data.data;
+        const data = await response.data.data.data;
         const activeVisas = data.filter((visa) => visa._status === 1);
         setRecentVisa(activeVisas);
       } catch (error) {

@@ -10,7 +10,7 @@ const WhoWeAre = () => {
     const fetchVideoUrl = async () => {
       try {
         const response = await axios.get(`${baseUrl}/section`);
-        const data = response.data.data.data;
+        const data = await response.data.data.data;
         const videoSection = data.filter((section) => section._menuid === 8);
         setVideo(videoSection);
       } catch (error) {

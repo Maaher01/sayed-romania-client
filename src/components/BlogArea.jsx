@@ -62,7 +62,9 @@ const BlogArea = () => {
                       <h2>
                         <a>{blog._title}</a>
                       </h2>
-                      <p className="text">{blog._subtitle}</p>
+                      <p className="text" style={{ cursor: "pointer" }}>
+                        {blog._subtitle}
+                      </p>
                     </div>
                   </div>
                 </div>

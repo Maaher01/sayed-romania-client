@@ -1,21 +1,30 @@
 import { createContext, useState, useEffect } from "react";
-import useAxiosFetch from "../hooks/useAxiosFetch";
 import { baseUrl } from "../api/api";
+import axios from "axios";
 
 const CompanyContext = createContext({});
 
 export const CompanyDataProvider = ({ children }) => {
   const [companyInfo, setCompanyInfo] = useState([]);
-  const { data, isLoading, fetchError } = useAxiosFetch(
-    `${baseUrl}/companysetup`
-  );
+  const [isLoading, setIsLoading] = useState(true);
+  const [fetchError, setFetchError] = useState(null);
 
-  //Fetch company data
+  // Fetch company data
   useEffect(() => {
-    if (data && data.data) {
-      setCompanyInfo(data.data[0]);
-    }
-  }, [data]);
+    const fetchCompanyData = async () => {
+      try {
+        const response = await axios.get(`${baseUrl}/companysetup`);
+        const data = await response.data.data[0];
+        setCompanyInfo(data);
+      } catch (error) {
+        setFetchError(error.message);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchCompanyData();
+  }, []);
 
   return (
     <CompanyContext.Provider

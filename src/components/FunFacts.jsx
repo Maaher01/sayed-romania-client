@@ -12,8 +12,7 @@ const FunFacts = () => {
     const fetchCounters = async () => {
       try {
         const response = await axios.get(`${baseUrl}/counter`);
-        const data = response.data.data.data;
-
+        const data = await response.data.data.data;
         const activeCounters = data.filter((counter) => counter._status === 1);
         setCounters(activeCounters);
       } catch (error) {
