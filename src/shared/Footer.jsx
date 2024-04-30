@@ -187,7 +187,7 @@ const Footer = () => {
                   <p>
                     © Copyright 2024 | All Rights Reserved by{" "}
                     <a href="https://www.softintechnology.com" target="_blank">
-                      softintechnology.com
+                      Softin Technology Ltd.
                     </a>{" "}
                   </p>
                 </div>
