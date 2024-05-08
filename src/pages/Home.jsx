@@ -4,6 +4,7 @@ import FeaturesSection from "../components/FeaturesSection";
 import FunFacts from "../components/FunFacts";
 import CallToAction from "../components/CallToAction";
 import Portfolio from "../components/Portfolio";
+import RecentWorkPermits from "../components/RecentWorkPermits";
 import Service from "../components/Service";
 import PricingTable from "../components/PricingTable";
 import BlogArea from "../components/BlogArea";
@@ -26,6 +27,7 @@ const Home = () => {
       <WhoWeAre />
       <CallToAction />
       <Portfolio />
+      <RecentWorkPermits />
       <Service />
       {/* <PricingTable /> */}
       <BlogArea />
